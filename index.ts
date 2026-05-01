@@ -17,8 +17,6 @@ const BASE_TWITTER_URL = "https://x.com/";
 const BASE_INSTAGRAM_URL = "https://www.instagram.com/reel/";
 
 client.on(Events.MessageCreate, async (msg) => {
-    console.log("HERE");
-
     if (!msg.content.includes(BASE_TWITTER_URL) && !msg.content.includes(BASE_INSTAGRAM_URL)) {
         return;
     }
@@ -28,8 +26,6 @@ client.on(Events.MessageCreate, async (msg) => {
     if (msg.channel.type !== ChannelType.GuildText) {
         return;
     }
-
-    console.log("HERE2");
 
     const tempWebhook = await msg.channel.createWebhook({
         name: msg.author.displayName,
