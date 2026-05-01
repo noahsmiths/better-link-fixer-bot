@@ -28,7 +28,7 @@ client.on(Events.MessageCreate, async (msg) => {
     }
 
     const tempWebhook = await msg.channel.createWebhook({
-        name: msg.author.displayName,
+        name: msg.author.displayName + " [Link Fixed]",
         avatar: msg.author.avatarURL()
     });
 
